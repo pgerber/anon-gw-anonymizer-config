@@ -1,3 +1,80 @@
+commit 4ad4e013d4c23c1dff45e77542e18dca47681e24
+Merge: 16d3720 877721a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Nov 25 19:02:25 2015 +0000
+
+    Merge branch 'master' into Whonix12
+
+commit 877721a442aac45e55a7a2ee504f35b2cb1f6dba
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Nov 24 12:28:33 2015 +0000
+
+    comment
+
+commit 70b9436b9178e0b8b79b42625ec7ff2886be017b
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Nov 24 12:24:38 2015 +0000
+
+    Workaround: Not using versioned 'Depends:' on 'tor'.
+    Ideally we would depend on 'tor (>= 0.2.7.3)' because we are using,
+    'KeepAliveIsolateSOCKSAuth' which is not available in earlier versions.
+    It would break the build. Debian jessie only has 'tor' '0.2.5'. Which is
+    the only available repository at anon-gw-anonymizer install time.
+    (1700_install-packages) The Tor Project's deb repository with Tor 0.2.7 is
+    added only afterwards. (2300_run-chroot-scripts-post-d) This workaround can
+    likely be removed once Whonix is based on Debian stretch.
+    
+    https://github.com/Whonix/anon-gw-anonymizer-config/pull/3
+
+commit 5309347a9fe9a63569eafb22aee1474732dba6d0
+Merge: 5d78a39 ec8665c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Nov 24 11:56:30 2015 +0000
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ec8665c85c7e030904391ff7f163005cd34d127c
+Merge: 5d78a39 50057f7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Nov 24 11:54:28 2015 +0000
+
+    Merge pull request #3 from rustybird/KeepAliveIsolateSOCKSAuth
+    
+    Use KeepAliveIsolateSOCKSAuth against TB fingerprinting
+
+commit 50057f729b099bb0a356c12474295fd897acdf03
+Author: Rusty Bird <rustybird@openmailbox.org>
+Date:   Tue Nov 24 10:22:03 2015 +0000
+
+    Synchronize TB SocksPort options against fingerprinting
+
+commit 5d78a39d975a8e586c824c44630c97d2a3a779fa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Nov 22 23:37:28 2015 +0000
+
+    enable Transparent Proxy Ports for Whonix-Gateway by default
+    
+    TransPort 127.0.0.1:9041
+    DnsPort 127.0.0.1:5400
+    
+    But still not enable transparent proxying by default in Whonix-Gateway firewall
+    settings. This is required so we can
+    'redirect tinyproxy traffic to 127.0.0.1 instead to qubes-netvm-gateway'.
+    
+    https://phabricator.whonix.org/T434
+
+commit 70efe1ca2691bba480391bf10e9ac0fef3d4d2d3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Nov 22 23:34:35 2015 +0000
+
+    fixed comment
+
+commit 16d37202772d33a8d7d6f27f43d0f8e6710104d4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 22 23:12:31 2015 +0000
+
+    bumped changelog version
+
 commit a2aa9e90b344cb4fc01cacc73ac2007b47e3f42e
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Thu Sep 3 12:57:01 2015 +0000
